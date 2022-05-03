@@ -30,3 +30,46 @@ function greetings (name, language) {
 // Sementara jika tidak mengembalikan nilai, kita tidak perlu memakai console.log() 
 let kor = greetings("Jamal", "Korea");
 console.log(kor);
+
+
+// Expression Function
+const greeting = function(name, language) {
+    if(language === "English") {
+        return "Good Morning " + name + "!";
+    } else if (language === "French") {
+        return "Bonjour " + name + "!";
+    } else {
+        return "Selamat Pagi " + name + "!";
+    }
+}
+
+console.log(greeting("Jennie", "French"));
+
+
+// Default Parameter - Pemberian nilai pada parameter secara langsung
+function exponentsFormula(baseNumber, exponent = 2) {
+    let result = baseNumber ** exponent;
+    console.log(`${baseNumber}^${exponent} = ${result}`);
+}
+
+exponentsFormula(3);
+
+
+// Rest Parameter - Dipakai pada saat kita ingin membuat function yang parameternya tidak menentu
+function jumlah(...numbers) {
+    let result = 0;
+    for (let number of numbers) {
+        result += number;
+    }
+    return result;
+}
+
+console.log(jumlah(3, 4, 5, 6));
+
+
+// Arrow Function - Hanya bisa menggunakan expression function
+const sayHello = (halo) => {
+    console.log(`${halo}`);
+}
+
+sayHello("YA!");
