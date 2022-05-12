@@ -30,9 +30,10 @@ const personalEnterprise = (from, message, store) => {
 
     // [5] - Membuat komposisi objek
     return Object.assign(self, personalEnterpriseBehaviors(self), canSendMessage(self), checkIsValidPhone(self), seeEmailSender(self));
+    // Jika kita membuat method/function umum baru (abstraksi), kita juga harus menambahkannya ke dalam Object.assign agar dapat mengakses properti yang ada pada class
 };
 
 const myPE = personalEnterprise('siPengirim@gmail.com', 'Theres a new product!', 'Tuding Store');
 myPE.createCatalog(); // Output: Catalog has been created : Tuding Store
 myPE.sendMessage();  // Output: send message: Theres a new product!
-myPE.sender();
+myPE.sender(); // Output: siPengirim@gmail.com
