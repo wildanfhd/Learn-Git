@@ -43,5 +43,8 @@ class otherWA extends Mail {
     }
 }
 
+// Membuat objek otherWA yang merombak isi dari method sendMessage dari class Mail
 const otherWa1 = new otherWA();
-otherWa1.sendMessage('Vamos!', 'Someone');
+otherWa1.sendMessage('Vamos!', 'Someone');  
+
+
