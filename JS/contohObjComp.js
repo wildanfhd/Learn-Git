@@ -37,3 +37,4 @@ const myPE = personalEnterprise('siPengirim@gmail.com', 'Theres a new product!',
 myPE.createCatalog(); // Output: Catalog has been created : Tuding Store
 myPE.sendMessage();  // Output: send message: Theres a new product!
 myPE.sender(); // Output: siPengirim@gmail.com
+myPE.isValid(); // Output: valid phone siPengirim@gmail.com
