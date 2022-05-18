@@ -1,3 +1,5 @@
+// Object Composition
+
 // Sebagai contoh, dari hirarki Mail yang sudah kita buat sebelumnya. Kita akan merombak dan membuatnya dengan pendekatan Object composition
 
 
