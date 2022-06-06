@@ -21,3 +21,34 @@ console.log(hitungLuasLingkaran(3)); // 28.26
 console.log(hitungLuasLingkaran(3)); // 28.26
 
 
+
+// -- Pure Function tidak boleh menimbulkan efek samping 
+const createPersonWithAge = (age, person) => {
+    return {...person, age};
+}
+
+const person = {
+    name: 'Jen'
+};
+
+const newPerson = createPersonWithAge(20, person);
+
+console.log({
+    person,
+    newPerson
+});
+
+
+const createCarWithSpeed = (speed, car) => {
+    return {...car, speed};
+};
+
+const car = ({
+    name: 'BMW'
+});
+
+const newCar = createCarWithSpeed(190, car);
+
+console.log({
+    car, newCar
+});
