@@ -1,0 +1,22 @@
+{
+  "name": "belajar_git",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node coba.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wildanfhd/Learn-Git.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wildanfhd/Learn-Git/issues"
+  },
+  "homepage": "https://github.com/wildanfhd/Learn-Git#readme"
+}
