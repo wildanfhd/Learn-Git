@@ -23,7 +23,7 @@
 
 
 const exam = {
-    students : 20,
+    students : 9,
     kelas : 3
 };
 
@@ -32,7 +32,7 @@ const checkRules = () => {
         if(exam.students >= 10 && exam.kelas >= 2) {
             resolve('Ujian dapat dilaksanakan!');
         } else {
-            reject('Jumlah kelas kurang!');
+            reject('Jumlah murid atau kelas kurang!');
         }
     });
 }
