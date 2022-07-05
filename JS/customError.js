@@ -6,7 +6,7 @@ class ValidationError extends Error {
     }
 }
 
-let json = '{"type":"FPS"}';
+let json = '{"name":"Call of Duty : Black OPS II"}';
 
 try {
     let newGame = JSON.parse(json);
