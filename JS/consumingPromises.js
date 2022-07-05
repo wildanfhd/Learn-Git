@@ -48,3 +48,32 @@ const handleFailure = rejectionReason => {
 checkRules()
     .then(handleSuccess)
     .catch(handleFailure); // menggunakan catch akan membantu kita untuk membuat kode lebih rapi dan menerapkan konsep separation of concerns.
+
+
+const carAcc = {
+    tire : 4,
+    door : 5,
+    steer : 1
+};
+
+const checkCar = () => {
+    return new Promise((resolve, reject) => {
+        if(carAcc.tire == 4 && carAcc.door >= 5 && carAcc.steer == 1) {
+            resolve('Aksesori mobil lengkap, silahkan digunakan');  
+        } else {
+            reject('Aksesori tidak lengkap, silahkan tukar');
+        }
+    });
+}
+
+const handleResolve = resolveVal => {
+    console.log(resolveVal);
+};
+
+const handleReject = rejectedReason => {
+    console.log(rejectedReason);
+};
+
+checkCar()
+    .then(handleResolve)
+    .catch(handleFailure)
