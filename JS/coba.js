@@ -63,4 +63,9 @@ console.log(capital["Indonesia"]);
 
 // minMax([8, -6, 0, 9, 40, 2, 23, 50, 2, -3, -15, 15, -23, 71]);
 
+
+console.log("Halo ges");
+
+
+
 export { capital };
