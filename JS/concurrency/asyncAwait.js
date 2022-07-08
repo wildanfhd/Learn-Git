@@ -33,3 +33,37 @@ async function makeOtherCoffee() {
 }
 
 makeOtherCoffee();
+
+
+
+// ==================================================================================================
+// Handling onRejected using async-await
+// ==================================================================================================
+
+// -- await hanya akan mengembalikan nilai jika promise berhasil dilakukan atau onFulfilled.
+// kita dapat menggunakan try..catch untuk menangani nilai onRejected
+
+const getFlour = () => {
+    return new Promise((resolve, reject) => {
+        const flour = 50
+        setTimeout(() => {
+            if(flour >= 20) {
+                resolve("Tepung berhasil diambil");
+            } else {
+                reject("Tepung tidak cukuP!");
+            }
+        }, 2000);
+    });
+}
+
+
+async function makeBread() {
+    try {
+        const bread = await getFlour();
+        console.log(bread);
+    } catch(rejectedReason) {
+        console.log(rejectedReason);
+    }
+}
+
+makeBread();
