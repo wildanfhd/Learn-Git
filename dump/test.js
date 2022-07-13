@@ -74,3 +74,30 @@ function lookUpProfile(name, prop) {
   console.log(lookUpProfile("Sherlock", "likes"));
   console.log(lookUpProfile("Harry", "likes"));
   console.log(lookUpProfile("Bob", "number"));
+
+
+
+  // ==============================================
+  function countup(n) {
+    if (n < 1) {
+      return [];
+    } else {
+      const countArray = countup(n - 1);
+      countArray.push(n);
+      return countArray;
+    }
+  }
+  console.log(countup(5));
+
+
+  function countdown(n){
+    if(n < 1) {
+      return [];
+    } else {
+      const countItDown = countdown(n - 1)
+      countItDown.unshift(n);
+      return countItDown;
+    }
+  }
+
+console.log(countdown(5));
