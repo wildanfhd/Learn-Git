@@ -43,27 +43,57 @@ makeOtherCoffee();
 // -- await hanya akan mengembalikan nilai jika promise berhasil dilakukan atau onFulfilled.
 // kita dapat menggunakan try..catch untuk menangani nilai onRejected
 
-const getFlour = () => {
+// const getFlour = () => {
+//     return new Promise((resolve, reject) => {
+//         const flour = 50
+//         setTimeout(() => {
+//             if(flour >= 20) {
+//                 resolve("Tepung berhasil diambil");
+//             } else {
+//                 reject("Tepung tidak cukuP!");
+//             }
+//         }, 2000);
+//     });
+// }
+
+
+// async function makeBread() {
+//     try {
+//         const bread = await getFlour();
+//         console.log(bread);
+//     } catch(rejectedReason) {
+//         console.log(rejectedReason);
+//     }
+// }
+
+// makeBread();
+
+
+
+// Contoh 2 
+// Method getShoes bersifat async karena menggunakan fungsi setTimeOut
+const getShoes = () => {
     return new Promise((resolve, reject) => {
-        const flour = 50
         setTimeout(() => {
-            if(flour >= 20) {
-                resolve("Tepung berhasil diambil");
+            const shoes = 'ready';
+            if(shoes === 'ready') {
+                resolve('The shoe is ready to use');
             } else {
-                reject("Tepung tidak cukuP!");
+                reject('The shoe isnt ready to use');
             }
-        }, 2000);
-    });
+        }, 3000)
+    })
 }
 
-
-async function makeBread() {
+async function useShoes() {
     try {
-        const bread = await getFlour();
-        console.log(bread);
+        const shoes = await getShoes();
+        console.log(shoes); // akan dicetak jika fungsi getShoes mengembalikan nilai resolve atau true
     } catch(rejectedReason) {
         console.log(rejectedReason);
     }
 }
 
-makeBread();
+
+useShoes();
+
