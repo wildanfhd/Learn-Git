@@ -89,7 +89,7 @@ function lookUpProfile(name, prop) {
   }
   console.log(countup(5));
 
-
+// Menghitung mundur menggunakan unshift()
   function countdown(n){
     if(n < 1) {
       return [];
